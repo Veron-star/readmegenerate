@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Veron-star/readmegenerate/issues"
   },
-  "homepage": "https://github.com/Veron-star/readmegenerate#readme"
+  "homepage": "https://github.com/Veron-star/readmegenerate#readme",
+  "dependencies": {
+    "inquirer": "^7.3.1"
+  }
 }
