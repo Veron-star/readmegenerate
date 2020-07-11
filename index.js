@@ -1,33 +1,82 @@
 // array of questions for user
-const prompt = require('inquirer').createPromptModule()
-const fs = require('fs')
+const fs = require('fs');
+const inquirer = require('inquirer'); 
+const format = require('./utils/generateMarkdown');
 
-const generateMarkdown = require('./utils/generateMarkdown.js')
-
-// function to write README file
-const writeToFile = (fileName, data) => {
-    fs.writeToFile(fileName + '.md', data, error => error ? console.error(error) : console.log(`${fileName + '.md'} generated!`))
-}
-
-// function to initialize program
-const init = async _ => {
-    let rmObject = {}
-    do {
-        const {rmUser, rmRepo} = await prompt([
+const question = [
         {
             type: 'input',
-            name: 'rmUser',
+            name: 'user',
             message: 'Enter user name.'
         },
         {
             type: 'input',
-            name: 'rmRepo',
+            name: 'repo',
             message: 'Enter repository name.'
+        },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'Enter project title',
+            default: 'My App'
+        },
+        {
+            type: 'input',
+            name: 'desc',
+            message: 'Enter project description',
+            default: 'CLI Application'
+        },
+        {
+            type: 'input',
+            name: 'tc',
+            message: 'Table of Content'
+        },
+        {
+            type: 'input',
+            name: 'inst',
+            message: 'Installation instruction',
+            default: 'author: ${data.email}'
+        },
+        {
+            type: 'input',
+            name: 'use',
+            message: 'Usage description'
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'unlicense'
+        },
+        {
+            type: 'input',
+            name: 'con',
+            message: 'Enter contributors'
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'What are the tests?'
+        },
+        {
+            type: 'input',
+            name: 'qs',
+            message: 'Do you have any question?'
         }
-        ])
-        rmObject = await
-    }
-}
+    ];
+// function to initialize program
+    function writeToFile(fileName, data) {
+        fs.writeFile(fileName, data, err => {
+            if (err) throw err
+            console.log("Welcome!");
+        });
+    };
+
+    function init() {
+        inquirer.prompt(question).then((input, list => {
+            writeToFile('README.md', format(input, list));
+        }));
+    };
+    
 
 // function call to initialize program
 init();

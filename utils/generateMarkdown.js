@@ -1,23 +1,37 @@
-const generateMarkdown = data => {
-    return `
-    <a href="${data.link}" style="float:right"><img src="${data.name}" title="${data.name}" width="120" height="120"></a>
-    # ${data.title.toUpperCase()}
-    ![License: ${(data.lic) ? data.lic : "None"}]
+function generateMarkdown(data) {
+    return `# ${data.title}
 
-    _Repo by ${data.name}_
-    _${data.desc}_
+## Description
+${data.desc}
 
-    _Installation:_
-    ${data.inst}
-    _Usage:_
-    ${data.use}
-    _Contributor:_
-    ${data.con}
-    _Test:_
-    ${data.test}
-    _Question:_
-    ${data.qs}
-  
+## Table of Contents
+i.  [Installation](#Installation)
+ii. [Usage](#Usage)
+iii.[License](#License) 
+iv. [Contributor](#Contributor)
+v.  [Tests](#Tests)
+vi. [Questions](#Questions)
+
+## Installation
+${data.inst}
+
+## Usage
+${data.use}
+
+## License
+${data.license}
+
+## Contributor
+${data.con}
+
+## Tests
+${data.test}
+
+## Questions
+${data.qs}
+
+Email: ${data.email}
+GitHub Profile: http://github.com/${data.githubName}
   `;
   }
   
