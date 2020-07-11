@@ -1,4 +1,4 @@
-# readme
+# readMe Generator
     
 
 #   Table of Contents
@@ -11,24 +11,24 @@
 ~   [Questions](#question)
 
 ## Description:
-![License](https://img.shields.io/badge/License--blue.svg "License Badge")
-    none
+![License](https://img.shields.io/badge/License-ISC-blue.svg "License Badge")
+    create readme generator
 
 ## Installation:
     none
 
 ## Usage:
-    none
+    to run project
 
 ## License:
     For more information about the license, please click the link below:
-    [License](https://opensource.org/licenses/)
+    [License](https://opensource.org/licenses/ISC)
 
 ## Contributor:
-    veron
+    veronica
 
 ## Tests:
-    none
+    no test
 
 ## Questions:
     If in doubt, please visit the following link:

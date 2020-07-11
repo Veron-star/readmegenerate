@@ -72,13 +72,13 @@ function generateMarkdown(response) {
     
 
 #   Table of Contents
-~   [Description](#description)
-~   [Installation](#installation)
-~   [Usage](#usage)
-~   [License](#license) 
-~   [Contributor](#contributor)
-~   [Tests](#test)
-~   [Questions](#question)
+-   [Description](#description)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [License](#license) 
+-   [Contributor](#contributor)
+-   [Tests](#test)
+-   [Questions](#question)
 
 ## Description:
 ![License](https://img.shields.io/badge/License-${response.license}-blue.svg "License Badge")
